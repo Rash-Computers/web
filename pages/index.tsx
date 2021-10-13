@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 
+import Demo from '../components/home/Demo';
 import Hero from '../components/home/Hero';
 import Partners from '../components/home/Partners';
 import Programs from '../components/home/Programs';
@@ -12,6 +13,7 @@ export default function Home(): ReactElement {
 			<Programs />
 			<Partners />
 			<Students />
+			<Demo />
 		</div>
 	);
 }
