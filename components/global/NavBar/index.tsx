@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 
 export default function NavBar(): ReactElement {
 	return (
-		<nav className="absolute h-16 w-screen bg-white px-28 flex justify-between items-end py-1 text-textSecondary font-bold text-xl">
+		<nav className="sticky top-0 h-16 w-screen bg-white px-28 flex justify-between items-end py-1 text-textSecondary font-bold text-xl">
 			<div>
 				<h1>
 					Rash <span className="text-primary">Computers</span>

@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 
 export default function Hero(): ReactElement {
 	return (
-		<div className="flex justify-between items-center mx-28 h-full space-x-56">
+		<div className="flex justify-between items-center h-full space-x-56">
 			<div className="flex flex-col h-1/2 justify-between items-start">
 				<article>
 					<h1 className="text-6xl font-bold mb-3 leading-tight">
