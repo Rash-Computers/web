@@ -9,7 +9,7 @@
 <h1 align="center">Rash Frontend</h1>
 
 <div>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/989e61a3-abde-486e-b74a-aa30f5669e4d/deploy-status)](https://app.netlify.com/sites/rash-computers-demo/deploys)
+<img src="https://api.netlify.com/api/v1/badges/989e61a3-abde-486e-b74a-aa30f5669e4d/deploy-status" alt="Netlify" />
 </div>
 
 <!-- Status -->
