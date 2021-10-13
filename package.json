@@ -4,7 +4,8 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"dev": "next"
+		"dev": "next",
+		"commit": "git add . && cz"
 	},
 	"dependencies": {
 		"next": "^11.1.2",
@@ -26,7 +27,6 @@
 	},
 	"husky": {
 		"hooks": {
-			"prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
 			"commit-msg": "npx --no-install commitlint --edit $1"
 		}
 	}
