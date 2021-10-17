@@ -9,7 +9,7 @@ export default function ProgramsHero(): ReactElement {
 						Upgrade your skills by Enrolling in one of our Schools.
 					</h1>
 
-					<h2 className="text-3xl">
+					<h2 className="text-3xl leading-loose">
 						The Curriculums are categorized in schools. Chose your relevant
 						paths by enrolling in one of the schools
 					</h2>

@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 
+import Layout from '../components/global/Layout';
 import Partners from '../components/global/Partners';
 import ProgramsHero from '../components/programs/Hero';
 import SchoolCard from '../components/programs/SchoolCard';
@@ -33,12 +34,12 @@ export default function Programs(): ReactElement {
 	];
 
 	return (
-		<div className="h-screen mx-28">
+		<Layout>
 			<ProgramsHero />
 			{schools.map((school, index) => (
 				<SchoolCard {...school} key={index} />
 			))}
 			<Partners />
-		</div>
+		</Layout>
 	);
 }
