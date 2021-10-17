@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "next",
 		"c": "git add . && cz",
-		"p": "yarn c && git commit origin"
+		"p": "yarn c && git push origin"
 	},
 	"dependencies": {
 		"next": "^11.1.2",
