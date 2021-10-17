@@ -11,6 +11,7 @@ module.exports = {
 			},
 			spacing: {
 				'90vh': '90vh',
+				577: '577px',
 			},
 			lineHeight: {
 				'60pt': '60pt',

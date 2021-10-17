@@ -9,20 +9,10 @@ export default function RegisterScreen({
 	changeScreenToLogin,
 	changeScreenToReset,
 }: Props): ReactElement {
-	const loginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-		e.stopPropagation();
-		changeScreenToLogin();
-	};
-
-	const resetClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-		e.stopPropagation();
-		changeScreenToReset();
-	};
-
 	return (
-		<div>
-			<button onClick={(e) => loginClick(e)}>Login</button>
-			<button onClick={(e) => resetClick(e)}>Reset</button>
+		<div className="">
+			<button onClick={changeScreenToLogin}>Login</button>
+			<button onClick={changeScreenToReset}>Reset</button>
 		</div>
 	);
 }
