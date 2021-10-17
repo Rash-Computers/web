@@ -12,6 +12,9 @@ module.exports = {
 			spacing: {
 				'90vh': '90vh',
 			},
+			lineHeight: {
+				'60pt': '60pt',
+			},
 		},
 	},
 	variants: {

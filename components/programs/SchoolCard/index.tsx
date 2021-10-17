@@ -17,7 +17,7 @@ export default function SchoolCard({
 				<header className="text-primary text-4xl font-bold mb-10">
 					{name}
 				</header>
-				<p className="text-4xl w-5/6">{description}</p>
+				<p className="leading-60pt text-4xl w-5/6">{description}</p>
 			</article>
 			<img src={`/assets/programs/${imageUrl}.svg`} alt={name} />
 		</div>
