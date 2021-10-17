@@ -5,9 +5,11 @@ import LoginScreen from './LoginScreen';
 import RegisterScreen from './RegisterScreen';
 import ResetScreen from './ResetScreen';
 
+type ScreenProps = 'login' | 'register' | 'reset';
+
 interface Props {
 	handleClose: () => any;
-	screenName: 'login' | 'register' | 'reset';
+	screenName: ScreenProps;
 }
 
 export default function AuthModal({
@@ -15,6 +17,7 @@ export default function AuthModal({
 	screenName,
 }: Props): ReactElement {
 	const [screen, setScreen] = useState(screenName);
+
 	return (
 		<Backdrop onClick={handleClose}>
 			<div
@@ -22,20 +25,11 @@ export default function AuthModal({
 				onClick={(e) => e.stopPropagation()}
 			>
 				{screen === 'login' ? (
-					<LoginScreen
-						changeScreenToRegister={() => setScreen('register')}
-						changeScreenToReset={() => setScreen('reset')}
-					/>
+					<LoginScreen changeScreen={(screen) => setScreen(screen)} />
 				) : screen === 'register' ? (
-					<RegisterScreen
-						changeScreenToLogin={() => setScreen('login')}
-						changeScreenToReset={() => setScreen('reset')}
-					/>
+					<RegisterScreen changeScreen={(screen) => setScreen(screen)} />
 				) : (
-					<ResetScreen
-						changeScreenToRegister={() => setScreen('register')}
-						changeScreenToLogin={() => setScreen('login')}
-					/>
+					<ResetScreen changeScreen={(screen) => setScreen(screen)} />
 				)}
 			</div>
 		</Backdrop>

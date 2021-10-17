@@ -1,18 +1,16 @@
 import React, { ReactElement } from 'react';
 
+type ScreenProps = 'login' | 'register' | 'reset';
+
 interface Props {
-	changeScreenToLogin: () => any;
-	changeScreenToReset: () => any;
+	changeScreen: (screen: ScreenProps) => any;
 }
 
-export default function RegisterScreen({
-	changeScreenToLogin,
-	changeScreenToReset,
-}: Props): ReactElement {
+export default function RegisterScreen({ changeScreen }: Props): ReactElement {
 	return (
-		<div className="">
-			<button onClick={changeScreenToLogin}>Login</button>
-			<button onClick={changeScreenToReset}>Reset</button>
+		<div>
+			<button onClick={() => changeScreen('login')}>Login</button>
+			<button onClick={() => changeScreen('reset')}>Reset</button>
 		</div>
 	);
 }
