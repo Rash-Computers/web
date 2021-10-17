@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 
+import Layout from '../components/global/Layout';
 import Partners from '../components/global/Partners';
 import Contact from '../components/home/Contact';
 import Demo from '../components/home/Demo';
@@ -9,13 +10,13 @@ import Students from '../components/home/Students';
 
 export default function Home(): ReactElement {
 	return (
-		<div className="h-screen mx-28">
+		<Layout>
 			<Hero />
 			<Programs />
 			<Partners />
 			<Students />
 			<Demo />
 			<Contact />
-		</div>
+		</Layout>
 	);
 }
