@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "next",
-		"commit": "git add . && cz"
+		"c": "git add . && cz",
+		"p": "yarn c && git commit origin $*"
 	},
 	"dependencies": {
 		"next": "^11.1.2",
@@ -13,12 +14,10 @@
 		"react-dom": "^17.0.2"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^13.2.1",
-		"@commitlint/config-conventional": "^13.2.0",
 		"@types/react": "^17.0.29",
+		"@types/react-dom": "^17.0.9",
 		"autoprefixer": "^10.3.7",
 		"cz-conventional-changelog": "3.3.0",
-		"husky": "^7.0.2",
 		"postcss": "^8.3.9",
 		"tailwindcss": "^2.2.16",
 		"typescript": "^4.4.4"
@@ -26,11 +25,6 @@
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
-		}
-	},
-	"husky": {
-		"hooks": {
-			"commit-msg": "npx --no-install commitlint --edit $1"
 		}
 	}
 }
