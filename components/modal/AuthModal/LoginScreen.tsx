@@ -8,7 +8,7 @@ interface Props {
 
 export default function RegisterScreen({ changeScreen }: Props): ReactElement {
 	return (
-		<div className="flex flex-col justify-evenly h-full">
+		<div className="flex flex-col justify-evenly h-full w-4/6">
 			<div>
 				<button className="w-full py-3 text-4xl font-semibold bg-purple-400 px-4 rounded-2xl border border-textSecondary mb-6">
 					Login with GitHub
