@@ -1,5 +1,6 @@
 module.exports = {
 	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+	mode: 'jit',
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
@@ -11,6 +12,7 @@ module.exports = {
 			},
 			spacing: {
 				'90vh': '90vh',
+				577: '577px',
 			},
 			lineHeight: {
 				'60pt': '60pt',

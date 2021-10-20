@@ -3,10 +3,16 @@ import React, { ReactElement, useState } from 'react';
 
 import AuthModal from '../../modal/AuthModal';
 
+type ScreenProps = 'login' | 'register' | 'reset';
+
 export default function NavBar(): ReactElement {
 	const [modal, setModal] = useState(false);
+	const [screen, setScreen] = useState<ScreenProps>('login');
 
-	const openModal = () => setModal(true);
+	const openModal = (screen: ScreenProps) => {
+		setScreen(screen);
+		setModal(true);
+	};
 	const closeModal = () => setModal(false);
 
 	return (
@@ -23,15 +29,20 @@ export default function NavBar(): ReactElement {
 					<a className="font-bold">Programs</a>
 				</Link>
 				<button
-					onClick={() => (modal ? closeModal() : openModal())}
+					onClick={() => (modal ? closeModal() : openModal('register'))}
 					className="font-bold"
 				>
 					Create Account
 				</button>
-				<button className="font-bold">Login</button>
+				<button
+					onClick={() => (modal ? closeModal() : openModal('login'))}
+					className="font-bold"
+				>
+					Login
+				</button>
 			</div>
 
-			{modal && <AuthModal handleClose={closeModal} />}
+			{modal && <AuthModal screenName={screen} handleClose={closeModal} />}
 		</nav>
 	);
 }

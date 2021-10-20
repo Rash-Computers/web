@@ -40,4 +40,6 @@ $ yarn dev
 # The server will initialize in the <http://localhost:3000>
 ```
 
+## 🚀 Git
+
 <a href="#top">Back to top</a>
