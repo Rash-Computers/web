@@ -16,27 +16,27 @@ export default function NavBar(): ReactElement {
 	const closeModal = () => setModal(false);
 
 	return (
-		<nav className="sticky top-0 h-16 w-screen bg-white px-28 flex justify-between items-end py-1 text-textSecondary font-bold text-xl">
+		<nav className="sticky top-0 h-16 w-screen bg-white px-28 flex justify-between items-end py-6 text-textSecondary font-semibold text-sm">
 			<div>
 				<Link href="/">
 					<a>
-						Rash <span className="text-primary">Computers</span>
+						Rash <span className="text-primary text-sm">Computers</span>
 					</a>
 				</Link>
 			</div>
 			<div className="space-x-9">
 				<Link href="/programs">
-					<a className="font-bold">Programs</a>
+					<a className="font-medium text-sm">Programs</a>
 				</Link>
 				<button
 					onClick={() => (modal ? closeModal() : openModal('register'))}
-					className="font-bold"
+					className="font-medium text-sm"
 				>
 					Create Account
 				</button>
 				<button
 					onClick={() => (modal ? closeModal() : openModal('login'))}
-					className="font-bold"
+					className="font-medium text-sm"
 				>
 					Login
 				</button>
