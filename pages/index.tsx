@@ -7,6 +7,7 @@ import Demo from '../components/home/Demo';
 import Hero from '../components/home/Hero';
 import Programs from '../components/home/Programs';
 import Students from '../components/home/Students';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 export default function Home(): ReactElement {
 	return (

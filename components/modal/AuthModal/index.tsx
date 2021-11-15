@@ -20,10 +20,10 @@ export default function AuthModal({
 
 	return (
 		<Backdrop onClick={handleClose}>
-			<div
+			{/* <div
 				className="h-3/5 bg-white w-577 rounded-3xl flex flex-col justify-center items-center"
 				onClick={(e) => e.stopPropagation()}
-			>
+			> */}
 				{screen === 'login' ? (
 					<LoginScreen changeScreen={(screen) => setScreen(screen)} />
 				) : screen === 'register' ? (
@@ -31,7 +31,7 @@ export default function AuthModal({
 				) : (
 					<ResetScreen changeScreen={(screen) => setScreen(screen)} />
 				)}
-			</div>
+			{/* </div> */}
 		</Backdrop>
 	);
 }

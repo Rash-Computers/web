@@ -19,14 +19,14 @@ export default function NavBar(): ReactElement {
 		<nav className="sticky top-0 h-16 w-screen bg-white px-28 flex justify-between items-end py-6 text-textSecondary font-semibold text-sm">
 			<div>
 				<Link href="/">
-					<a>
+					<a className="text-gray-700">
 						Rash <span className="text-primary text-sm">Computers</span>
 					</a>
 				</Link>
 			</div>
 			<div className="space-x-9">
 				<Link href="/programs">
-					<a className="font-medium text-sm">Programs</a>
+					<a className="font-medium text-sm text-gray-500">Programs</a>
 				</Link>
 				<button
 					onClick={() => (modal ? closeModal() : openModal('register'))}
