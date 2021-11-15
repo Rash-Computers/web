@@ -1,8 +1,8 @@
 import React, { ReactElement, useState } from 'react';
-import { Modal, Typography } from 'antd';
+import { Divider, Modal, Typography } from 'antd';
 
 
-const  {Title} = Typography
+const  {Title, Text} = Typography
 
 type ScreenProps = 'login' | 'register' | 'reset';
 
@@ -17,49 +17,47 @@ export default function RegisterScreen({ changeScreen }: Props): ReactElement {
 	return (
 
 		<Modal title={
-			<Title level={3} className="text-center">Register</Title>
+			<Title level={3} className="text-center text-gray-700">Create an account</Title>
 		} footer={null} visible={registermodalvisibility} onCancel={()=> setregistermodalvisibility(false)}>
-			<div className="flex flex-col justify-evenly h-full w-4/6">
+			<div className="flex flex-col justify-between items-center h-full">
 				<div>
-					<button className="w-full py-3 text-4xl font-semibold bg-purple-400 px-4 rounded-2xl border border-textSecondary mb-6">
+					<button className="bg-primary text-white text-md px-14 py-4 rounded-md hover:border-indigo-600 hover:transition w-96">
 						Sign with GitHub
 					</button>
-					<div className="w-full flex items-center justify-center space-x-4">
-						<div className="bg-textSecondary w-1/6 h-[2px]"></div>
-						<span>or register with email</span>
-						<div className="bg-textSecondary w-1/6 h-[2px]"></div>
-					</div>
+					<Divider className="w-96">
+						<Text className="text-gray-500 text-sm">Or sign in with Google</Text>
+					</Divider>
 				</div>
 				<form className="flex flex-col justify-evenly items-center space-y-6">
 					<input
 						type="email"
 						name="email"
 						placeholder="Email"
-						className="p-4 border-textSecondary border rounded-2xl w-full"
+						className="p-4 border rounded-md w-96 outline-none"
 					/>
 					<input
 						type="text"
 						name="name"
 						placeholder="Name"
-						className="p-4 border-textSecondary border rounded-2xl w-full"
+						className="p-4 border rounded-md w-96 outline-none"
 					/>
 					<input
 						type="password"
 						name="password"
 						placeholder="Password"
-						className="p-4 border-textSecondary border rounded-2xl w-full"
+						className="p-4 border rounded-md w-96 outline-none"
 					/>
 					<input
 						type="submit"
 						value="Sign Up"
-						className="cursor-pointer w-full py-3 text-4xl font-semibold bg-purple-400 px-4 rounded-2xl border border-textSecondary mb-4"
+						className="cursor-pointer bg-primary text-white text-md px-14 py-4 rounded-md hover:border-indigo-600 hover:transition w-96"
 					/>
 				</form>
-				<div className="text-sm font-normal flex justify-between">
+				<div className="text-sm font-normal justify-between mt-8 mb-16">
 					<span>
 						Have an account?
 						<a
-							className="ml-3 hover:text-primary cursor-pointer"
+							className="ml-2 hover:text-primary cursor-pointer"
 							onClick={() => changeScreen('login')}
 						>
 							Login
@@ -67,7 +65,7 @@ export default function RegisterScreen({ changeScreen }: Props): ReactElement {
 					</span>
 					<span>
 						<a
-							className="text-primary cursor-pointer"
+							className="text-primary cursor-pointer ml-8"
 							onClick={() => changeScreen('reset')}
 						>
 							Forgot Password?

@@ -19,7 +19,7 @@ export default function AuthModal({
 	const [screen, setScreen] = useState(screenName);
 
 	return (
-		<Backdrop onClick={handleClose}>
+		<Backdrop onClick={()=> null}>
 			{/* <div
 				className="h-3/5 bg-white w-577 rounded-3xl flex flex-col justify-center items-center"
 				onClick={(e) => e.stopPropagation()}
