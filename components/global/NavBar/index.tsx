@@ -20,7 +20,7 @@ export default function NavBar(): ReactElement {
 			<div>
 				<Link href="/">
 					<a className="text-gray-700">
-						Rash <span className="text-primary text-sm">Computers</span>
+						Rash.<span className="text-primary text-sm">Ed</span>
 					</a>
 				</Link>
 			</div>
