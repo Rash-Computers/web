@@ -2,9 +2,9 @@ import React, { ReactElement } from 'react';
 
 export default function ProgramsHero(): ReactElement {
 	return (
-		<div className="flex justify-between items-center h-full">
+		<div className="flex mt-32 justify-between items-center h-full">
 			<div className="flex items-start justify-between">
-				<article className="w-2/4 -mt-10">
+				<article className="w-2/4">
 					<h1 className="text-5xl font-semibold mb-8 leading-tight">
 						Upgrade your skills by Enrolling in one of our Schools.
 					</h1>

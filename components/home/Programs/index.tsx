@@ -4,7 +4,7 @@ interface Props {}
 
 export default function Programs({}: Props): ReactElement {
 	return (
-		<div className="h-full flex items-center justify-evenly flex-col">
+		<div className="h-full mt-24 flex items-center justify-evenly flex-col">
 			<h1 className="font-semibold text-4xl my-8 mb-32">Our Programs Include</h1>
 
 			<div className="h-5/6 w-full grid grid-cols-2 grid-rows-2 gap-10">

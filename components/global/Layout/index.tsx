@@ -10,7 +10,7 @@ export default function Layout({ children }: Props): ReactElement {
 	return (
 		<div>
 			<NavBar />
-			<div className="h-screen mx-28">{children}</div>
+			<div className="mx-28">{children}</div>
 		</div>
 	);
 }

@@ -12,7 +12,7 @@ export default function SchoolCard({
 	imageUrl,
 }: Props): ReactElement {
 	return (
-		<div className="flex justify-between items-start mb-56">
+		<div className="flex justify-between items-start mt-56">
 			<article className="mt-20">
 				<header className="text-primary text-3xl font-semibold mb-10">
 					{name}

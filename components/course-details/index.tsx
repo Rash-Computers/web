@@ -3,8 +3,12 @@
  * @description: course details component
  */
 
+import {Typography} from "antd"
 import { ReactElement } from "react"
 import CourseOutlineComponent from "./CourseOutline"
+import InstructorDetailsComponent from "./InstructorDetails"
+
+const {Title}  = Typography
 
 export default function CourseDetailsComponent (): ReactElement {
 
@@ -27,6 +31,10 @@ export default function CourseDetailsComponent (): ReactElement {
             </div>
 
             <CourseOutlineComponent /> <br />
+
+            <h1 className="mt-6 text-xl">Meet Your Instructor</h1>
+
+            <InstructorDetailsComponent />
 
         </div>
     )
