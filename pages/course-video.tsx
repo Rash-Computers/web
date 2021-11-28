@@ -9,9 +9,9 @@ export default function CourseVideoComponent(): ReactElement {
 		<Layout>
             <div className="flex flex-row">
                 <div className="-ml-28 pl-28 pt-16 border-r-[1px] border-t-[1px] border-gray-500 w-[17vw] h-[90vh] bg-white">
-                    <p className="text-gray-600 text-sm font-normal">Home</p>
-                    <p className="text-gray-600 text-sm font-normal mt-8">Dashboard</p>
-                    <p className="text-gray-600 text-sm font-normal mt-8">My Courses</p>
+                    <p className="text-gray-600 text-sm font-normal hover:text-gray-700 hover:font-medium cursor-pointer">Home</p>
+                    <p className="text-gray-600 text-sm font-normal hover:text-gray-700 hover:font-medium cursor-pointer mt-8">Dashboard</p>
+                    <p className="text-gray-600 text-sm font-normal hover:text-gray-700 hover:font-medium cursor-pointer mt-8">My Courses</p>
                     <p className="text-gray-700 text-sm font-medium mt-8">Log out</p>
                 </div>
                 <div className="-mr-28 pl-28 pt-4 border-t-[1px] border-gray-500 w-[89vw] h-[90vh]">
