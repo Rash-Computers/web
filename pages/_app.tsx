@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import '../constants/global-axios-config'
 
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';

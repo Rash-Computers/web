@@ -1,11 +1,17 @@
 import React, { ReactElement } from 'react';
-
+import { NextPage } from 'next'
 import Layout from '../components/global/Layout';
 import Partners from '../components/global/Partners';
 import ProgramsHero from '../components/programs/Hero';
 import SchoolCard from '../components/programs/SchoolCard';
+import { GetStaticProps } from 'next'
 
-export default function Programs(): ReactElement {
+interface Props {
+	schools?: { name: string; description: string; imageUrl: string }[];
+}
+
+export const getStaticProps = async () => {
+	
 	const schools: { name: string; description: string; imageUrl: string }[] = [
 		{
 			name: 'School Of App Development',
@@ -33,13 +39,27 @@ export default function Programs(): ReactElement {
 		},
 	];
 
+	return {
+		props: {
+		  schools,
+		},
+	  }
+  }
+
+
+const Programs: NextPage<Props> = ({ schools }) => {	
+
 	return (
 		<Layout>
 			<ProgramsHero />
-			{schools.map((school, index) => (
+			{schools?.map((school, index) => (
 				<SchoolCard {...school} key={index} />
 			))}
 			<Partners />
 		</Layout>
-	);
+	); 
+
 }
+
+
+export default Programs
