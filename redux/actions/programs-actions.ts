@@ -49,7 +49,7 @@ export const getallschools = async () => {
 
             store.dispatch({
                 type: actionTypes.GET_ALL_SCHOOLS,
-                payload: schools
+                payload: res.data
             })
         })
     } catch (error) {

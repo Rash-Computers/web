@@ -2,26 +2,21 @@ import React, { ReactElement } from 'react';
 import Link from 'next/link';
 
 interface Props {
-	name: string;
-	description: string;
-	imageUrl: string;
+	schoolDetails: any
 }
 
-export default function SchoolCard({
-	name,
-	description,
-	imageUrl,
-}: Props): ReactElement {
+export default function SchoolCard({schoolDetails}: Props): ReactElement {	
+
 	return (
 		<Link href="/course-details">
 			<div className="flex justify-between items-start mt-56 cursor-pointer">
 				<article className="mt-20">
 					<header className="text-primary text-3xl font-semibold mb-10">
-						{name}
+						{schoolDetails?.schoolName}
 					</header>
-					<p className="text-2xl leading-8 w-5/6">{description}</p>
+					<p className="text-2xl leading-8 w-5/6">{schoolDetails?.description}</p>
 				</article>
-				<img src={`/assets/programs/${imageUrl}.svg`} className="w-2/5" alt={name} />
+				<img src={schoolDetails?.coverImageUrl} className="w-2/5" alt={schoolDetails?.schoolName} />
 			</div>
 		</Link>
 	);

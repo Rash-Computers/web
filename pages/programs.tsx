@@ -14,22 +14,26 @@ interface Props {
 }
 
 
-const Programs: NextPage<Props> = () => {	
+const Programs: NextPage<Props> = ({ schools }) => {	
 
-	const allschools = useAppSelector(state => state.schools)
+	Programs.getInitialProps = async ({ req }) => {
+		
+		const schools: { name: string; description: string; imageUrl: string }[] = [];
+
+		return { schools }
+	  }
+
+	const allschools = useAppSelector(state => state?.schools)
 
 	useEffect(() => {
 		actions.getallschools()
-	},[allschools])
-
-	console.log('data: ',allschools);
-	
+	},[allschools])	
 
 	return (
 		<Layout>
 			<ProgramsHero />
 			{allschools?.map((school: any, index: any) => (
-				<SchoolCard {...school} key={index} />
+				<SchoolCard schoolDetails={school} key={index} />
 			))}
 			<Partners />
 		</Layout>
