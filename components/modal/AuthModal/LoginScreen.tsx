@@ -17,7 +17,7 @@ export default function RegisterScreen({ changeScreen }: Props): ReactElement {
 
 	return (
 		<Modal title={
-			<Title level={3} className="text-center text-gray-700">Create an account</Title>
+			<Title level={3} className="text-center text-gray-700">Login in</Title>
 		} footer={null} visible={loginmodalvisibility} onCancel={()=> setloginmodalvisibility(false)}>
 			<div className="flex flex-col justify-between items-center h-full">
 				<div>
