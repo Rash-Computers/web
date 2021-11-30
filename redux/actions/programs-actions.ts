@@ -172,12 +172,39 @@ export const getCurrentCourseOutlineDetails = () => {
 
     let schoolOutlineDetails: any
 
-    schoolOutlineDetails =  sessionStorage.getItem('active-school')
+    schoolOutlineDetails =  sessionStorage.getItem('active-school-outline')
 
     store.dispatch({
         type: actionTypes.GET_ALL_COURSE_OUTLINE_DETAILS,
         payload: JSON.parse(schoolOutlineDetails)
     })
+
+}
+
+
+export const getLessonVideoDetails = async () => {
+
+    let schoolOutlineDetails: any
     
+    schoolOutlineDetails =  sessionStorage.getItem('active-school-outline')
+    
+    let outline = JSON.parse(schoolOutlineDetails)
+
+    const url = `/lessons_videos/school-outline/${outline?.id}`
+
+    try {
+        await axios.get(url,{
+            headers: headers
+        })
+        .then(res =>  {  
+            store.dispatch({
+                type: actionTypes.GET_LESSON_VIDEO_DETAILS,
+                payload: res.data
+            })
+        })
+
+    } catch (error) {
+        console.log('Error: ',error)   
+    }
 
 }
