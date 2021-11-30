@@ -88,3 +88,18 @@ export const schoolCurriculumsReducer = ( state = initialstate, action: any) => 
     }
 
 }
+
+
+
+export const schoolCurrentOutlineReducer = ( state = initialstate, action: any) => {
+
+    switch (action.type) {
+        case actionTypes.GET_ALL_COURSE_OUTLINE_DETAILS:
+            
+            return action.payload
+     
+        default:
+            return state;
+    }
+
+}

@@ -92,9 +92,7 @@ export const getAllSchoolOutlines = async () => {
         await axios.get(url,{
             headers: headers
         })
-        .then(res =>  {
-            
-            console.log('res: ',res.data);            
+        .then(res =>  {          
 
             store.dispatch({
                 type: actionTypes.GET_ALL_SCHOOL_OUTLINES,
@@ -167,5 +165,19 @@ export const getAllSchoolCurriculums = async () => {
     } catch (error) {
         console.log('Error: ',error)   
     }
+
+}
+
+export const getCurrentCourseOutlineDetails = () => {
+
+    let schoolOutlineDetails: any
+
+    schoolOutlineDetails =  sessionStorage.getItem('active-school')
+
+    store.dispatch({
+        type: actionTypes.GET_ALL_COURSE_OUTLINE_DETAILS,
+        payload: JSON.parse(schoolOutlineDetails)
+    })
+    
 
 }
