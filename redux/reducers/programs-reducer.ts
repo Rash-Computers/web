@@ -74,3 +74,17 @@ export const schoolInstuctorsReducer = ( state = initialstate, action: any) => {
     }
 
 }
+
+
+export const schoolCurriculumsReducer = ( state = initialstate, action: any) => {
+
+    switch (action.type) {
+        case actionTypes.GET_ALL_SCHOOL_CURRICULUMS:
+            
+            return action.payload
+     
+        default:
+            return state;
+    }
+
+}

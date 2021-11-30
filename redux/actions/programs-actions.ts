@@ -132,3 +132,32 @@ export const getAllSchoolInstructors = async () => {
     }
 
 }
+
+export const getAllSchoolCurriculums = async () => {
+
+    let schoolDetails:any =  sessionStorage.getItem('active-school')
+    
+    let schoolId = schoolDetails?.id
+
+    const url = `/courses_curriculums/school/${schoolId}`
+
+
+    try {
+        await axios.get(url,{
+            headers: headers
+        })
+        .then(res =>  {
+            
+            console.log('res: ',res.data);            
+
+            store.dispatch({
+                type: actionTypes.GET_ALL_SCHOOL_CURRICULUMS,
+                payload: res.data
+            })
+        })
+
+    } catch (error) {
+        console.log('Error: ',error)   
+    }
+
+}
