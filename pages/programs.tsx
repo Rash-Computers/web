@@ -19,7 +19,7 @@ const Programs: NextPage<Props> = ({ schools }) => {
 		const schools: { name: string; description: string; imageUrl: string }[] = [];
 
 		return { schools }
-	  }
+	}
 
 	const allschools = useAppSelector(state => state?.schools)
 

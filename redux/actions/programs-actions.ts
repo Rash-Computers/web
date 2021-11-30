@@ -35,11 +35,13 @@ export const getallschools = async () => {
 
 export const getschooldetails = async () => {
 
-    let schoolDetails =  sessionStorage.getItem('active-school')
+    let schoolDetails: any
+
+    schoolDetails =  sessionStorage.getItem('active-school')
 
     store.dispatch({
         type: actionTypes.GET_SCHOOL_DETAILS,
-        payload: schoolDetails
+        payload: JSON.parse(schoolDetails)
     })
     
 
@@ -48,21 +50,21 @@ export const getschooldetails = async () => {
 
 export const getAllSchoolCoursePrerequisite = async () => {
 
-    let schoolDetails:any =  sessionStorage.getItem('active-school')
+    let schoolDetails: any
     
-    let schoolId = schoolDetails?.id
+    schoolDetails =  sessionStorage.getItem('active-school')
+    
+    let school = JSON.parse(schoolDetails)
 
-    const url = `/course_prerequisite/schools/${schoolId}`
+    const url = `/course_prerequisite/schools/${school?.id}`
 
 
     try {
         await axios.get(url,{
             headers: headers
         })
-        .then(res =>  {
+        .then(res =>  {     
             
-            console.log('res: ',res.data);            
-
             store.dispatch({
                 type: actionTypes.GET_ALL_COURSE_PREREQUISITES,
                 payload: res.data
@@ -77,9 +79,11 @@ export const getAllSchoolCoursePrerequisite = async () => {
 
 export const getAllSchoolOutlines = async () => {
 
-    let schoolDetails:any =  sessionStorage.getItem('active-school')
+    let schoolDetails: any
     
-    let schoolId = schoolDetails?.id
+    schoolDetails =  sessionStorage.getItem('active-school')
+    
+    let schoolId = JSON.parse(schoolDetails).id
 
     const url = `/school_outlines/schools/${schoolId}`
 
@@ -106,9 +110,11 @@ export const getAllSchoolOutlines = async () => {
 
 export const getAllSchoolInstructors = async () => {
 
-    let schoolDetails:any =  sessionStorage.getItem('active-school')
+    let schoolDetails: any
     
-    let schoolId = schoolDetails?.id
+    schoolDetails =  sessionStorage.getItem('active-school')
+    
+    let schoolId = JSON.parse(schoolDetails).id
 
     const url = `/courses_instructors/schools/${schoolId}`
 
@@ -135,9 +141,11 @@ export const getAllSchoolInstructors = async () => {
 
 export const getAllSchoolCurriculums = async () => {
 
-    let schoolDetails:any =  sessionStorage.getItem('active-school')
+    let schoolDetails: any
     
-    let schoolId = schoolDetails?.id
+    schoolDetails =  sessionStorage.getItem('active-school')
+    
+    let schoolId = JSON.parse(schoolDetails).id
 
     const url = `/courses_curriculums/school/${schoolId}`
 

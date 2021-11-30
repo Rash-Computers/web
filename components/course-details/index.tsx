@@ -10,7 +10,6 @@ import * as actions from "../../redux/actions/programs-actions"
 import { useAppSelector } from "../../redux/store"
 import { NextPage } from "next"
 import CourseDetails from "./details"
-import { InferGetStaticPropsType } from 'next'
 
 interface SchoolDetails {
     archived: Boolean,
@@ -25,12 +24,12 @@ interface SchoolDetails {
 
 const CourseDetailsComponent : NextPage = () => {
 
-
     const schoolDetails = useAppSelector(state => state?.schoolDetails)
-
     useEffect(() => {
         actions.getschooldetails()
-    },[schoolDetails])   
+        
+    },[])   
+
 
     return (
         <div>
