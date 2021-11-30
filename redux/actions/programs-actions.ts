@@ -83,9 +83,9 @@ export const getAllSchoolOutlines = async () => {
     
     schoolDetails =  sessionStorage.getItem('active-school')
     
-    let schoolId = JSON.parse(schoolDetails).id
+    let school = JSON.parse(schoolDetails)
 
-    const url = `/school_outlines/schools/${schoolId}`
+    const url = `/school_outlines/schools/${school?.id}`
 
 
     try {
@@ -145,9 +145,9 @@ export const getAllSchoolCurriculums = async () => {
     
     schoolDetails =  sessionStorage.getItem('active-school')
     
-    let schoolId = JSON.parse(schoolDetails).id
+    let school = JSON.parse(schoolDetails)
 
-    const url = `/courses_curriculums/school/${schoolId}`
+    const url = `/courses_curriculums/school/${school?.id}`
 
 
     try {
