@@ -4,7 +4,6 @@
  */
 
  import Link from 'next/link';
- import { ReactElement } from "react"
  import {Space, Typography, Divider} from "antd"
 
 const {Title} = Typography

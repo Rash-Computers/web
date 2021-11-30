@@ -72,3 +72,13 @@ export const getschooldetails = async () => {
     
 
 }
+
+
+export const schoolCoursePrerequisite = async () => {
+
+    let schoolDetails =  sessionStorage.getItem('active-school')
+    
+    // let schoolId = schoolDetails?.id
+
+
+}
