@@ -74,7 +74,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/course-details/CourseOutline.ts"  ],
   "exclude": [
     "node_modules"
   ]

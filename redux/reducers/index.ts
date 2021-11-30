@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
-import { schoolsReducer } from "./programs-reducer";
+import { schoolDetailsReducer, schoolsReducer } from "./programs-reducer";
 
 export const rootReducer = combineReducers({
-    schools : schoolsReducer
+    schools : schoolsReducer,
+    schoolDetails: schoolDetailsReducer
 })

@@ -9,7 +9,7 @@
 
 const {Title} = Typography
 
- export default function CourseOutlineComponent (): ReactElement {
+ export default function CourseOutlineComponent (){
 
     return (
         <div className="pl-28 pt-6 pb-8 bg-gray-300 w-[100vw] -ml-28 ">

@@ -4,8 +4,6 @@ import Layout from '../components/global/Layout';
 import Partners from '../components/global/Partners';
 import ProgramsHero from '../components/programs/Hero';
 import SchoolCard from '../components/programs/SchoolCard';
-import { GetStaticProps } from 'next'
-import { useSelector } from 'react-redux';
 import { useAppSelector } from '../redux/store';
 import * as actions from '../redux/actions/programs-actions'
 

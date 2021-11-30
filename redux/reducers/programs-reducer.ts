@@ -19,3 +19,16 @@ export const schoolsReducer = ( state = initialprogramsstate, action: any) => {
     }
 
 }
+
+export const schoolDetailsReducer = ( state = initialprogramsstate, action: any) => {
+
+    switch (action.type) {
+        case actionTypes.GET_SCHOOL_DETAILS:
+            
+            return action.payload
+     
+        default:
+            return state;
+    }
+
+}

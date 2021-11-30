@@ -58,3 +58,17 @@ export const getallschools = async () => {
 
 
 }
+
+
+
+export const getschooldetails = async () => {
+
+    let schoolDetails =  sessionStorage.getItem('active-school')
+
+    store.dispatch({
+        type: actionTypes.GET_SCHOOL_DETAILS,
+        payload: schoolDetails
+    })
+    
+
+}
