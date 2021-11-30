@@ -5,7 +5,7 @@ interface Props {
 
 const CourseDetails = ({schoolDetails}: Props) => {
 
-    schoolDetails = {"id":3,"schoolName":"School Of Data Science","description":"Our School of Data Science teaches the basic fundamentals of Artificial Intelligence and Data Science. It includes working with Jupyter Notebooks, Sci-kit learn and other Machine Learning Libraries","coverImageUrl":"https://rashcomputeres.vercel.app/assets/programs/ds.svg","published":true,"archived":false}
+    // schoolDetails = {"id":3,"schoolName":"School Of Data Science","description":"Our School of Data Science teaches the basic fundamentals of Artificial Intelligence and Data Science. It includes working with Jupyter Notebooks, Sci-kit learn and other Machine Learning Libraries","coverImageUrl":"https://rashcomputeres.vercel.app/assets/programs/ds.svg","published":true,"archived":false}
     
 
     return (
