@@ -60,3 +60,17 @@ export const schoolOutlineReducer = ( state = initialstate, action: any) => {
     }
 
 }
+
+
+export const schoolInstuctorsReducer = ( state = initialstate, action: any) => {
+
+    switch (action.type) {
+        case actionTypes.GET_ALL_SCHOOL_INSTRUCTORS:
+            
+            return action.payload
+     
+        default:
+            return state;
+    }
+
+}
